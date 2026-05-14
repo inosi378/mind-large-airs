@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+
+data/
+outputs/
+*.zip
+*.tsv
+*.csv
+*.pkl
+*.joblib
+
+.DS_Store
+.vscode/
