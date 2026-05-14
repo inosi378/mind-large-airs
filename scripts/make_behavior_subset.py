@@ -64,19 +64,17 @@ def main():
     parser.add_argument("--dev_n", type=int, required=True)
     args = parser.parse_args()
 
-    train_dir = Path(args.train_dir)
-    dev_dir = Path(args.dev_dir)
     out_dir = Path(args.out_dir)
 
     make_subset(
-        src_dir=train_dir,
+        src_dir=Path(args.train_dir),
         out_dir=out_dir / "train",
         n_behaviors=args.train_n,
         name="train",
     )
 
     make_subset(
-        src_dir=dev_dir,
+        src_dir=Path(args.dev_dir),
         out_dir=out_dir / "dev",
         n_behaviors=args.dev_n,
         name="dev",
